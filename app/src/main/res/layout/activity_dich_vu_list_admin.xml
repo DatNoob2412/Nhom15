@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DichVuListAdminActivity"
+    android:background="@drawable/bg">
+
+<!--    toolbar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarRl"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:id="@+id/btnback"
+            android:background="@android:color/transparent"
+            android:layout_margin="10dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/titledvTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Dịch Vụ"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"/>
+        <TextView
+            android:id="@+id/titleloaidvTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="loại"
+            android:layout_below="@id/titledvTv"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+
+
+    </RelativeLayout>
+<!--    tim kiem-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txttimkiem"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/toolbarRl"
+        android:hint="Tìm kiếm"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_search_white"
+        android:textColorHint="@color/gray01"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:textColor="@color/black"/>
+
+<!--    list dich vu-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dichvuRv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_dichvu_admin"
+        android:layout_below="@id/txttimkiem"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

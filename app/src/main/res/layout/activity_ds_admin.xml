@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.dsAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnprofile"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_person_white"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Admin"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/sutitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:layout_centerHorizontal="true"
+            android:text="ChupAnh.admin@gmail.com"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/btnlogoutad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_power_white" />
+
+
+    </RelativeLayout>
+    <!--Tìm kiếm-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txttimkiem"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/toolbarRl"
+        android:hint="Tìm kiếm"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_search_white"
+        android:textColorHint="@color/gray01"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:textColor="@color/black"/>
+
+    <!--    list loại dich vụ-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Rvloaidv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txttimkiem"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="100dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_loaidv">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/adminOptionsLl">
+
+        <!--        Thêm thể loại dịch vụ-->
+        <Button
+            android:id="@+id/btnloaidv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:text="Loại"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/ic_playlist_add"/>
+
+        <Button
+            android:id="@+id/btndv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:text="Dich vụ"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/ic_post_add"/>
+
+        <!--        lich dat-->
+
+        <Button
+            android:id="@+id/btnlichdat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:text="Đặt lịch"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/ic_calendar"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

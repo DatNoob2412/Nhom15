@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.DichVuDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toobarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Chi tiết dịch vụ"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toobarRl"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--            Dich vụ info-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/imgRl"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/gray02">
+
+                    <!--        img-->
+                    <ImageView
+                        android:id="@+id/imageIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tenTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/imgRl"
+                    android:maxLines="1"
+                    android:text="Tên dịch vụ"
+                    android:textColor="@color/black" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tenTv"
+                    android:layout_toEndOf="@id/imgRl">
+                    <!--cot loai dv-->
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/loaiLableTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Loại: "
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/loaiTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A"
+                            android:textColor="@color/black" />
+
+                    </TableRow>
+
+                    <!--cot gia-->
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/giaLableTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Giá:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/giaTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A"
+                            android:textColor="@color/black" />
+
+
+                    </TableRow>
+
+                    <!--cot thoi gian-->
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/timeLableTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Thời gian:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/timeTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A"
+                            android:textColor="@color/black" />
+
+
+                    </TableRow>
+
+                    <!--cot thoi gian-->
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/viewLableTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="view"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/viewTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/A"
+                            android:textColor="@color/black" />
+
+
+                    </TableRow>
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/motaTv"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/giaTv"
+                android:layout_toEndOf="@id/imgRl"
+                android:maxLines="15"
+                android:text="Mô tả nội dung dich vụ"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DVoption"
+        android:orientation="horizontal"
+        android:background="@color/design_default_color_primary"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDatLich"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_bookmark_border"
+            android:text="Đặt Lịch chụp"
+            android:background="@color/design_default_color_primary"/>
+    </LinearLayout>
+
+</RelativeLayout>

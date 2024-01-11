@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.LoaiDichVuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:id="@+id/btnback"
+            android:background="@android:color/transparent"
+            android:layout_margin="10dp"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Thêm mới loại dịch vụ"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loaidvTil"
+        app:hintEnabled="false"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtloaidv"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_category_gray"
+            android:drawablePadding="10dp"
+            android:hint="Nhập loại dịch vụ"
+            android:textColorHint="@color/gray01"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    btn thêm -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsubmit"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_btn01"
+        android:text="Thêm"
+        android:layout_below="@id/loaidvTil"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>

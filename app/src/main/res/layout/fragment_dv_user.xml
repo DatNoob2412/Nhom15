@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dvUserFragment">
+
+    <!-- Tim kiem-->
+    <EditText
+        android:id="@+id/txttimkiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_search_white"
+        android:hint="Tìm kiếm"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray01" />
+
+    <!--    list dich vu-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RvDichVu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/row_dichvu_user"/>
+
+</LinearLayout>

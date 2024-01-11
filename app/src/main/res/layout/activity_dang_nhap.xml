@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.DangNhapActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/imgkd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dangky"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--            Email-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/txtemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:hint="Email"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            passwork-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email"
+                android:layout_marginTop="5dp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/txtpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            Quên mật khẩu-->
+            <TextView
+                android:id="@+id/quenMK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Quên mật khẩu?"
+                android:textColor="@color/gray02" />
+
+            <!--            btn đăng nhập-->
+            <Button
+                android:id="@+id/btndangnhap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quenMK"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_btn01"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="@color/white" />
+
+            <!--            facebook-->
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btndangnhap"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="48dp" />
+            <!--            gg-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/socialicons"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:layout_below="@id/btndangnhap"-->
+            <!--                android:layout_marginTop="30dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_info"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:textSize="18sp" />-->
+
+            <!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:id="@+id/gg_btn"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_width="48dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_height="48dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:src="@drawable/gg"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_margin="10dp" />&ndash;&gt;-->
+
+
+            <!--            </LinearLayout>-->
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--    đăng ký-->
+    <TextView
+        android:id="@+id/dangky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="@string/new_user_sigup"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
